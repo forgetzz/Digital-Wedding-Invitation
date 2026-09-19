@@ -20,13 +20,20 @@ type RSVPPayload = {
  * a backend is available — the calling component doesn't need to change.
  */
 async function submitRsvp(payload: RSVPPayload): Promise<{ ok: true }> {
-  await new Promise((resolve) => setTimeout(resolve, 700));
+  const response = await fetch("/api/rsvp", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
 
-  console.log("RSVP submitted (mock):", payload);
+  if (!response.ok) {
+    throw new Error("Failed to submit RSVP");
+  }
 
   return { ok: true };
 }
-
 const RSVPSection = forwardRef<HTMLDivElement, { onNext: () => void; onBack: () => void }>(
   ({ onNext, onBack }, ref) => {
     const [name, setName] = useState("");

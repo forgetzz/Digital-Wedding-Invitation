@@ -12,5 +12,19 @@
     "guests": 1,
     "attendance": "not-attending",
     "createdAt": "2026-09-19T06:00:00.000Z"
+  },
+  {
+    "id": "d72c25a0-d1b0-40b9-be99-8dcf9af7d872",
+    "name": "sdfsdf",
+    "guests": 1,
+    "attendance": "attending",
+    "createdAt": "2026-09-19T05:54:59.929Z"
+  },
+  {
+    "id": "17e32ae8-27e2-4f39-aec5-f547a981f759",
+    "name": "ytutuyiu89879",
+    "guests": 5,
+    "attendance": "not-attending",
+    "createdAt": "2026-09-19T05:55:26.711Z"
   }
 ]

@@ -14,7 +14,7 @@ type RSVP = RSVPPayload & {
   createdAt: string;
 };
 
-const filePath = path.join(process.cwd(), "data", "rsvp.json");
+const filePath = path.join(process.cwd(), "src", "data", "rsvp.json");
 
 export async function POST(request: Request) {
   try {
@@ -63,3 +63,5 @@ export async function POST(request: Request) {
     );
   }
 }
+
+export async function GET() { try { const file = await fs.readFile(filePath, "utf-8"); const data: RSVP[] = JSON.parse(file); return Response.json(data); } catch (error) { console.error("Failed to read RSVP:", error); return Response.json( { message: "Failed to load RSVP" }, { status: 500 } ); } }
