@@ -10,7 +10,7 @@ import StorySection from "@/components/invitation/StorySection";
 import EventSection from "@/components/invitation/EventSection";
 import GallerySection from "@/components/invitation/GallerySection";
 import RSVPSection from "@/components/invitation/RSVPSection";
-import {GuestList} from "@/components/invitation/GuestList";
+import GuestList from "@/components/invitation/GuestList";
 import ClosingSection from "@/components/invitation/ClosingSection";
 
 import BackgroundMusic from "@/components/invitation/BackgroundMusic";
