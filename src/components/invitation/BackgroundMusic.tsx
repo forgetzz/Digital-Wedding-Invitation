@@ -11,7 +11,7 @@ export default function BackgroundMusic({
   isPlaying,
 }: BackgroundMusicProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(true);
 
   useEffect(() => {
     const audio = new Audio("/wedding.mp3");
