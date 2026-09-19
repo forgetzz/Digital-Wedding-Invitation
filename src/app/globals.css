@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: serif;
+  --font-body: sans-serif;
+  --font-script: cursive;
+}
+
+* {
+  box-sizing: border-box;
+  
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #fbf6ec;
+}
+
+/* Hide scrollbars on the app shell while keeping scroll functionality
+   inside individual invitation pages that need it. */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle repeating Islamic geometric motif used as a low-opacity texture
+   layer. Kept as a CSS background so it never blocks content and costs
+   nothing at runtime. */
+.islamic-texture {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cg fill='none' stroke='%23C6A15B' stroke-width='0.6' opacity='0.35'%3E%3Cpath d='M42 2 L74 22 L74 62 L42 82 L10 62 L10 22 Z'/%3E%3Cpath d='M42 16 L60 27 L60 55 L42 66 L24 55 L24 27 Z'/%3E%3Ccircle cx='42' cy='42' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Thin gold hairline border used across cards and frames. */
+.border-hairline {
+  border: 1px solid rgba(198, 161, 91, 0.55);
+}
+
+/* Ensures GSAP-controlled elements have no flash-of-unstyled-content
+   before the entrance timeline runs. Components toggle visibility via
+   GSAP itself once JS has hydrated. */
+.gsap-ready {
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

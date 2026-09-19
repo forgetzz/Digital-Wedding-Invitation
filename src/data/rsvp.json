@@ -1,0 +1,16 @@
+[
+  {
+    "id": "abc123",
+    "name": "Irfan",
+    "guests": 2,
+    "attendance": "attending",
+    "createdAt": "2026-09-19T05:00:00.000Z"
+  },
+  {
+    "id": "def456",
+    "name": "Ahmad",
+    "guests": 1,
+    "attendance": "not-attending",
+    "createdAt": "2026-09-19T06:00:00.000Z"
+  }
+]
